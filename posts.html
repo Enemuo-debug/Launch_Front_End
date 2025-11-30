@@ -50,8 +50,11 @@
       div.innerHTML = `
         <div class="caption">${post.caption}</div>
         <div class="intro">${post.intro}</div>
-        <button class="btn" onclick="viewPost(${post.id})">View Post</button>
+        <button class="btn" data-id="${post.id}">View Post</button>
       `;
+      div.addEventListener("click", (e)=>{
+        viewPost(e.target.dataset.id)
+      })
       container.appendChild(div);
       });
     }

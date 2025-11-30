@@ -1,5 +1,5 @@
 import { redraw, getObjectAt, findDevice } from "./canvas.js";
-import { URL } from "./editPost.js";
+import { URL } from "./config.js";
 
 // modes = 0 -> Normal
 // 1 -> Link
@@ -52,7 +52,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function activeBtn(index)
   {
-    console.log(mode);
     switch (index) {
       case 0:
         joinBtn.classList.remove("active");
@@ -190,7 +189,6 @@ window.addEventListener("DOMContentLoaded", () => {
       const res = await fetch(`${URL}/diagrams/sssp/${simulationId}/${objUUID}`);
       const data = await res.json();
       addLog(data.data[0])
-      console.log(data);
     }
   });
 
@@ -249,7 +247,6 @@ window.addEventListener("DOMContentLoaded", () => {
       }
 
       const body = await res.json();
-      console.log(body);
       const sim = body.data;
       if (!sim) {
         addLog("Simulation not found", "error");
