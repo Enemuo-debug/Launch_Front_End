@@ -1,1 +1,1 @@
-export const URL = "http://zurus06.runasp.net";
+export const URL = "https://zurus06.runasp.net";
