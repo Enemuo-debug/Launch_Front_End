@@ -100,7 +100,7 @@
 
         if (response.status !== 200) {
           alert("You are not logged in. Please sign in again.");
-          window.location.href = "/browser/signin.html";
+          window.location.href = "/signin.html";
           return;
         }
 
@@ -121,7 +121,7 @@
       } catch (error) {
         postsContainer.innerHTML = `<p style="color:red;">Error loading dashboard: ${error.message}</p>`;
         alert("You are not logged in. Please sign in again.");
-        window.location.href = "/browser/signin.html";
+        window.location.href = "/signin.html";
         return;
       }
     }
@@ -132,7 +132,7 @@
         headers: { "Content-Type": "application/json" },
         credentials: "include"
       });
-      window.location = "/browser/signin"
+      window.location = "/signin"
     })
 
     function renderPosts(posts) {
@@ -180,7 +180,7 @@
           editBtn.addEventListener("click", (e) => {
             const postId = e.target.dataset.id;
             // Redirect to edit page with the post ID as a URL parameter
-            window.location.href = `/browser/editpost.html?id=${postId}`;
+            window.location.href = `/editpost.html?id=${postId}`;
           });
       });
     }
@@ -200,7 +200,7 @@
 
         if (!res.ok) throw new Error("Failed to create post");
         const newPost = await res.json();
-        window.location.href = `/browser/editpost.html?id=${newPost.data.id}`;
+        window.location.href = `/editpost.html?id=${newPost.data.id}`;
         e.target.reset();
       } catch (err) {
         alert("Error: " + err.message);

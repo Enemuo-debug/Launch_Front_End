@@ -104,7 +104,7 @@
         document.title = `${post.caption} - Zurus06.NAT Posts`;
         drawSimulations();
         document.querySelector(".creatorDiv").addEventListener("click", () => {
-          window.location.href = `/browser/creator.html?id=${aboutCreator.data.id}`;
+          window.location.href = `/creator.html?id=${aboutCreator.data.id}`;
         });
         // Load comments for this post
         loadComments(postId);

@@ -56,8 +56,8 @@
     </form>
 
     <div class="redirect-links">
-      <p>Already have an account? <a href="/browser/signin.html">Login here</a></p>
-      <p>Didn’t verify your email? <a href="/browser/signin.html">Verify your email</a></p>
+      <p>Already have an account? <a href="/signin.html">Login here</a></p>
+      <p>Didn’t verify your email? <a href="/signin.html">Verify your email</a></p>
     </div>
   </div>
 
@@ -114,7 +114,7 @@
       const message = await response.json();
       console.log(message);
       alert(message.message || message.title);
-      window.location = "/browser/signin.html";
+      window.location = "/signin.html";
     });
   </script>
 </body>

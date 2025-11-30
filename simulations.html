@@ -316,7 +316,7 @@
       if (!selectedSimId) return alert("No simulation selected");
 
       if (action === "edit") {
-        window.location = `/browser/simulation.html?id=${selectedSimId}`;
+        window.location = `/simulation.html?id=${selectedSimId}`;
       } 
       else if (action === "delete") {
         if (!confirm("Are you sure you want to delete this simulation?")) return;
